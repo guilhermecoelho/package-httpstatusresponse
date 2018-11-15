@@ -32,6 +32,13 @@ exports.removeFail = function (res, err) {
     failJson(res, codes.ErrorCodes.BAD_REQUEST, err);
 };
 
+exports.authSuccess = function (res) {
+    const content = {
+        message: "Auth success"
+    };
+    successJson(res, codes.SuccessCodes.OK, content);
+}
+
 exports.authFail = function (res) {
     const err = {
         message: "Auth fail"
